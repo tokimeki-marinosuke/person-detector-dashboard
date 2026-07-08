@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>人物検出ダッシュボード</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  body { font-family: sans-serif; text-align: center; padding: 40px; background: #1a1a1a; color: #eee; }
+  .stat { font-size: 3em; margin: 20px; }
+  .label { font-size: 1em; color: #aaa; }
+  canvas { max-width: 700px; margin: 40px auto; }
+</style>
+</head>
+<body>
+  <h1>人物検出ダッシュボード</h1>
+  <div class="stat" id="totalVisits">-</div>
+  <div class="label">累計検出回数</div>
+  <div class="stat" id="totalPeople">-</div>
+  <div class="label">累計人数</div>
+  <canvas id="dailyChart"></canvas>
+  <p class="label" id="updatedAt"></p>
+
+<script>
+fetch('stats.json?_=' + Date.now())  // キャッシュ回避
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('totalVisits').textContent = data.total_visits;
+    document.getElementById('totalPeople').textContent = data.total_people;
+    document.getElementById('updatedAt').textContent = '最終更新: ' + data.updated_at;
+
+    new Chart(document.getElementById('dailyChart'), {
+      type: 'bar',
+      data: {
+        labels: data.daily.map(d => d.date),
+        datasets: [{
+          label: '日別検出回数',
+          data: data.daily.map(d => d.visits),
+          backgroundColor: '#4a9eff'
+        }]
+      }
+    });
+  });
+</script>
+</body>
+</html>
