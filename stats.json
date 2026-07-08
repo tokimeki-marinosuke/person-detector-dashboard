@@ -1,0 +1,17 @@
+{
+  "total_visits": 105,
+  "total_people": 102,
+  "daily": [
+    {
+      "date": "2026-07-01",
+      "visits": 19,
+      "people": 0
+    },
+    {
+      "date": "2026-07-08",
+      "visits": 86,
+      "people": 102
+    }
+  ],
+  "updated_at": "2026-07-08T11:25:26.245109"
+}
