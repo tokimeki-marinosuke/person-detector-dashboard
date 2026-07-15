@@ -19,6 +19,10 @@
   <div class="label">累計人数</div>
   <canvas id="dailyChart"></canvas>
   <p class="label" id="updatedAt"></p>
+  <h2>環境データ</h2>
+  <img src="graphs/co2.png" style="max-width:100%;" alt="CO2グラフ">
+  <img src="graphs/temperature.png" style="max-width:100%;" alt="気温グラフ">
+  <img src="graphs/humidity.png" style="max-width:100%;" alt="湿度グラフ">
 
 <script>
 fetch('stats.json?_=' + Date.now())  // キャッシュ回避
