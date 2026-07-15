@@ -1,22 +1,17 @@
 {
-  "total_visits": 272,
-  "total_people": 450,
+  "total_visits": 154,
+  "total_people": 310,
   "daily": [
     {
-      "date": "2026-07-01",
-      "visits": 19,
-      "people": 0
-    },
-    {
       "date": "2026-07-08",
-      "visits": 214,
-      "people": 378
+      "visits": 57,
+      "people": 112
     },
     {
       "date": "2026-07-15",
-      "visits": 39,
-      "people": 72
+      "visits": 97,
+      "people": 198
     }
   ],
-  "updated_at": "2026-07-15T10:30:01.926368"
+  "updated_at": "2026-07-15T11:00:01.833968"
 }
