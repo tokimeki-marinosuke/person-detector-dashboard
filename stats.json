@@ -1,6 +1,6 @@
 {
-  "total_visits": 154,
-  "total_people": 310,
+  "total_visits": 295,
+  "total_people": 789,
   "daily": [
     {
       "date": "2026-07-08",
@@ -9,9 +9,9 @@
     },
     {
       "date": "2026-07-15",
-      "visits": 97,
-      "people": 198
+      "visits": 238,
+      "people": 677
     }
   ],
-  "updated_at": "2026-07-15T11:00:01.833968"
+  "updated_at": "2026-07-15T11:28:09.499874"
 }
